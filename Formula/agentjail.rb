@@ -2,28 +2,28 @@
 class Agentjail < Formula
   desc "Policy guardrail for coding agents (Claude Code, Codex, Cursor)"
   homepage "https://agentjail.io"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/LuD1161/agentjail/releases/download/v0.1.0/agentjail-v0.1.0-darwin-arm64.tar.gz"
-      sha256 "b9f55ff297b9866db6cf1c796241ad88a579341dc7b33188e43aae08515325e1"
+      url "https://github.com/LuD1161/agentjail/releases/download/v0.1.1/agentjail-v0.1.1-darwin-arm64.tar.gz"
+      sha256 "55ceea7af7dcdf0a0e59daba7bb56ba395f4b37b7d8538519a239e096c82432d"
     end
     on_intel do
-      url "https://github.com/LuD1161/agentjail/releases/download/v0.1.0/agentjail-v0.1.0-darwin-amd64.tar.gz"
-      sha256 "3a92464ddfb6a59013236009e6b23ca14a8523c361950557f7b5dc0bd9b796f6"
+      url "https://github.com/LuD1161/agentjail/releases/download/v0.1.1/agentjail-v0.1.1-darwin-amd64.tar.gz"
+      sha256 "ef83bdf6d50cb89ef8f92341dcf205549d4fff6346227abcdf034b3248dbab36"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/LuD1161/agentjail/releases/download/v0.1.0/agentjail-v0.1.0-linux-arm64.tar.gz"
-      sha256 "40dbc1ecd2a4c672b53a32f047c20edfb2bf39dfa4be25dd9ff3a0e79dcea5d3"
+      url "https://github.com/LuD1161/agentjail/releases/download/v0.1.1/agentjail-v0.1.1-linux-arm64.tar.gz"
+      sha256 "fdddea731bfff007bbbff6fa4589e43c9808548fa06a56ea1f65717a14aa39e7"
     end
     on_intel do
-      url "https://github.com/LuD1161/agentjail/releases/download/v0.1.0/agentjail-v0.1.0-linux-amd64.tar.gz"
-      sha256 "14b4a48f14a21f921c9f34d8e7c856d96af2003f68be043bb5910973e72cdcbc"
+      url "https://github.com/LuD1161/agentjail/releases/download/v0.1.1/agentjail-v0.1.1-linux-amd64.tar.gz"
+      sha256 "b88062fa4834b604c1ce6377e686492c6bafe4ead6f3a9861fd36b8d03c6b815"
     end
   end
 
@@ -33,6 +33,7 @@ class Agentjail < Formula
   end
 
   def post_install
+    ENV["AGENTJAIL_INSTALL_METHOD"] = "brew"
     system bin/"agentjail", "install", "--all"
   end
 
