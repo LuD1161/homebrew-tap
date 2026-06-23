@@ -2,28 +2,28 @@
 class Agentjail < Formula
   desc "Policy guardrail for coding agents (Claude Code, Codex, Cursor)"
   homepage "https://agentjail.io"
-  version "0.2.5"
+  version "0.3.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/LuD1161/agentjail/releases/download/v0.2.5/agentjail-v0.2.5-darwin-arm64.tar.gz"
-      sha256 "bd8b3a7d2aa05ce16c50180437bb2356301480d56e84e1f9b627fae411cb5a72"
+      url "https://github.com/LuD1161/agentjail/releases/download/v0.3.0/agentjail-v0.3.0-darwin-arm64.tar.gz"
+      sha256 "1eb13b06cc984cf5148531bf6767f6e6a4681b0ebf2b5d8ff440e30055f42337"
     end
     on_intel do
-      url "https://github.com/LuD1161/agentjail/releases/download/v0.2.5/agentjail-v0.2.5-darwin-amd64.tar.gz"
-      sha256 "5ba23ed47b9f36bb2592011535e5186f03be537c3b93c1dec73e36516fdcb9fb"
+      url "https://github.com/LuD1161/agentjail/releases/download/v0.3.0/agentjail-v0.3.0-darwin-amd64.tar.gz"
+      sha256 "de0e6e88bff193a17a27ef79a58a04700ddd634e8f1309dc1226dee0bba809a8"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/LuD1161/agentjail/releases/download/v0.2.5/agentjail-v0.2.5-linux-arm64.tar.gz"
-      sha256 "90d279155ab24813ca3bae8ec3e1293432fece9990111de41b9979e7905ef6ae"
+      url "https://github.com/LuD1161/agentjail/releases/download/v0.3.0/agentjail-v0.3.0-linux-arm64.tar.gz"
+      sha256 "edc4d309051575817e02147dda20ecdd7cf3eb5aa3d2f5237d28cb219af7c8fa"
     end
     on_intel do
-      url "https://github.com/LuD1161/agentjail/releases/download/v0.2.5/agentjail-v0.2.5-linux-amd64.tar.gz"
-      sha256 "3e7da370076f88614e6a4258e4720845ee6ca5488b24a72a40d6866719847f05"
+      url "https://github.com/LuD1161/agentjail/releases/download/v0.3.0/agentjail-v0.3.0-linux-amd64.tar.gz"
+      sha256 "22b646ee4502b7e6fda9cd3eba268a129d289180a25f09b4adb630335a701439"
     end
   end
 
