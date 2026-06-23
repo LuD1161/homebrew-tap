@@ -8,22 +8,22 @@ class Agentjail < Formula
   on_macos do
     on_arm do
       url "https://github.com/LuD1161/agentjail/releases/download/v0.2.3/agentjail-v0.2.3-darwin-arm64.tar.gz"
-      sha256 "cef2bb3d2b74c75197b2fb674167e6dc5a86cccf1ac602246b84b4e2cde50cd2"
+      sha256 "70f20da11681084006925dd6b5a13eed009487b28ba2ea633e54f9af4a0c0111"
     end
     on_intel do
       url "https://github.com/LuD1161/agentjail/releases/download/v0.2.3/agentjail-v0.2.3-darwin-amd64.tar.gz"
-      sha256 "f7a8e3e6b2aa5d7e7ef97d9a67935abc2fcf94f173a9c3b859e17173abd9c13f"
+      sha256 "475e20470708d25be5cc8c457c826c258d0c9924909725d0a2a59736d5b04883"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/LuD1161/agentjail/releases/download/v0.2.3/agentjail-v0.2.3-linux-arm64.tar.gz"
-      sha256 "026fb6219fc9ad201380de9b9837df86c160839456a65c478c271cde838c7abc"
+      sha256 "16fc8dd8011e1cba52235e0d9d88e8067003806c09c0a2d16b5dbefdf8612f79"
     end
     on_intel do
       url "https://github.com/LuD1161/agentjail/releases/download/v0.2.3/agentjail-v0.2.3-linux-amd64.tar.gz"
-      sha256 "badf3da6098f3203c2f1f60f09b84a4ec05fc90c06491c21ab46fcf93c433e88"
+      sha256 "3a9d23d4e094433085854e82439eab223822f412c929e8678480ab200640d3c8"
     end
   end
 
