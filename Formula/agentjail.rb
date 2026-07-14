@@ -2,34 +2,36 @@
 class Agentjail < Formula
   desc "Policy guardrail for coding agents (Claude Code, Codex, Cursor)"
   homepage "https://agentjail.io"
-  version "0.7.0"
+  version "0.8.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/LuD1161/agentjail/releases/download/v0.7.0/agentjail-v0.7.0-darwin-arm64.tar.gz"
-      sha256 "7ff6a017b40ccc8c24335da5b33eaf25706a9b4cad477bf3689cf3278295bfd3"
+      url "https://github.com/LuD1161/agentjail/releases/download/v0.8.0/agentjail-v0.8.0-darwin-arm64.tar.gz"
+      sha256 "475151ab0e3fdd1e44587b93063a6a09a42d6d0bdeac1a99b94e4bb6a7856f49"
     end
     on_intel do
-      url "https://github.com/LuD1161/agentjail/releases/download/v0.7.0/agentjail-v0.7.0-darwin-amd64.tar.gz"
-      sha256 "592688b9b4df1819b8df09387a34cba8723ab8b5f6044191a695d3dde6c848df"
+      url "https://github.com/LuD1161/agentjail/releases/download/v0.8.0/agentjail-v0.8.0-darwin-amd64.tar.gz"
+      sha256 "99a641415c2d2cbf16e0522debd89d28210e8c64b147a1435e5e6175a261d45c"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/LuD1161/agentjail/releases/download/v0.7.0/agentjail-v0.7.0-linux-arm64.tar.gz"
-      sha256 "3a62824c5c4f4f24a1366a6e2bd26f1f0e5dd5a666f9719d4b2cbd20978aefbb"
+      url "https://github.com/LuD1161/agentjail/releases/download/v0.8.0/agentjail-v0.8.0-linux-arm64.tar.gz"
+      sha256 "dff0b68643b6e80a5beb620594bd60e79f43dbd5b8556931a7d1415188a1d6b7"
     end
     on_intel do
-      url "https://github.com/LuD1161/agentjail/releases/download/v0.7.0/agentjail-v0.7.0-linux-amd64.tar.gz"
-      sha256 "cce9108fbf11f9373ad03c3e987f654d87fb2778c74e049a05d6686aa5b36887"
+      url "https://github.com/LuD1161/agentjail/releases/download/v0.8.0/agentjail-v0.8.0-linux-amd64.tar.gz"
+      sha256 "f568edd17f0ed14d7ab22a68bd43285a31fdf3e9712f376bfd33dd8185e52b53"
     end
   end
 
   def install
-    bin.install "agentjail", "agentjail-hook", "agentjail-daemon",
-                "agentjail-shield", "agentjail-netproxy"
+    bin.install "agentjail", "agentjail-hook"
+    %w[agentjail-daemon agentjail-shield agentjail-netproxy agentjail-secrets].each do |role|
+      bin.install_symlink "agentjail" => role
+    end
   end
 
   def post_install
